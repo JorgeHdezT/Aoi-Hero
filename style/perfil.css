@@ -88,11 +88,44 @@ header {
   transition: all .5s;
 }
 
-/*PERFIL*/
+
+/*Perfil*/
+
+#Perfil {
+  margin-top: 20px;
+}
+
+#DatosPrincipales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#EditarCuenta {
+  color: green;
+  font-weight: bold;
+}
+
+#OpcionesCuenta {
+  display: flex;
+  overflow: scroll;
+  border: 1px solid blue;
+  width: 100%;
+
+}
+.opciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   min-width: 100px;
+    border-radius: 8px;
+    margin: 0px 10px;
+}
 
 .opciones img {
-  width: 20px;
-  border: 10px solid red;
+  width: 50px;
 }
 
 footer {
@@ -126,6 +159,28 @@ footer {
   #navbar {
       display: block;
       font-weight: bolder;
+  }
+
+  .OfertaProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    width: 30%;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  #ProductosEnOferta{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .OfertaProducto img {
+    width: 400px;
+    margin-bottom: 5px;
   }
 
   main {
