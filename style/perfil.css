@@ -118,10 +118,12 @@ header {
 .opciones {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
    min-width: 100px;
-    border-radius: 8px;
-    margin: 0px 10px;
+  border-radius: 8px;
+  margin: 0px 10px;
+  margin-left: -10px;
 }
 
 .opciones img {

@@ -138,8 +138,10 @@ header {
 } 
  
 #ProductosEnOferta { 
-  display: flex; 
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start
 } 
  
 .OfertaProducto { 
@@ -231,7 +233,7 @@ footer {
  
   #ProductosEnOferta{ 
     display: flex; 
-    justify-content: flex-start; 
+    justify-content: space-between;
     flex-wrap: wrap; 
     gap: 50px; 
   } 
