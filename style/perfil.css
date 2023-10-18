@@ -145,6 +145,7 @@ header {
 
 #Perfil {
   margin-top: 20px;
+  height: 800px;
 }
 
 #DatosPrincipales {
@@ -185,7 +186,6 @@ header {
 footer {
   width: 100%;
   position: absolute;
-  bottom: 0;
   background-color: dodgerblue;
   height: 100px;
   color: white;

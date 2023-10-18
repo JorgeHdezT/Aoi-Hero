@@ -187,7 +187,7 @@ a.active, a:hover {
 
 main {
     margin-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,7 +348,6 @@ main {
 footer {
     width: 100%;
     position: absolute;
-    bottom: 0;
     background-color: dodgerblue;
     height: 100px;
     color: white;
