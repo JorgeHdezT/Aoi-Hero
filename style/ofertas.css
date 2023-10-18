@@ -1,57 +1,109 @@
-* { 
-  padding: 0; 
-  margin: 0; 
-  text-decoration: none; 
-  list-style: none; 
-  box-sizing: border-box; 
-} 
-html { 
-  min-height: 100%; 
-  position: relative; 
-} 
- 
-body { 
-  font-family: sans-serif; 
-} 
- 
-header { 
-  background: dodgerblue; 
-  height: 100px; 
-  width: 100%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-} 
- 
-.icon { 
-  width: 30px; 
-  height: 30px; 
-} 
- 
-#Buscar { 
-  margin-left: 10px; 
-  width: 70px; 
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
-} 
- 
-#Buscar img:first-child { 
-  width: 28px; 
-  filter:invert(); 
-  display: block; 
-} 
- 
-#Cuenta { 
-  display: flex; 
-  gap: 15px; 
-  margin-right: 10px; 
-} 
- 
-#logo { 
-  width: 140px; 
-  height: 140px; 
-} 
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background: dodgerblue;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+#Buscar {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#Buscar .imagenNavMovil {
+  background-image: url(../images/menu.png);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  filter:invert();
+  display: visible;
+  transition: all 0.25s;
+}
+
+/*NAVEGACION MOVIL*/
+
+
+.MovilNav_Container input {
+  margin: 10px;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: url("https://assets.digitalocean.com/labs/icons/search.svg") no-repeat 95% 50% rgb(255, 255, 255);
+  background-size: 20px;
+}
+
+.MovilNav_Container:hover .MovilNav  {
+  left: 0;
+}
+
+#Buscar .imagenNavMovil:hover {
+  background-image: url(../images/closeIcon.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.MovilNav {
+  position: absolute;
+  top: 100px;
+  left: -250px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background: rgb(76, 76, 76);
+  height: 100%;
+  width: 60%;
+  transition: all .5s;
+  
+}
+
+.MovilNav ul li {
+  display: flex;
+}
+.MovilNav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+/*fin navegacion movil*/
+
+#Cuenta {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+#logo {
+  width: 140px;
+  height: 140px;
+}
  
 #navbar { 
   background-color: dodgerblue; 
@@ -83,10 +135,10 @@ header {
   border-radius: 3px; 
 } 
  
-#navbar a.active, #navbar a:hover { 
-  background-color: orange; 
-  transition: all .5s; 
-} 
+a.active, a:hover {
+  background-color: orange;
+  transition: all .5s;
+}
  
  
 /*ofertas*/ 
@@ -212,9 +264,13 @@ footer {
       height: 200px; 
   } 
  
-  #Buscar img:first-child { 
+  .imagenNavMovil { 
       display: none; 
   } 
+
+  .MovilNav {
+    display: none;
+}
  
   #navbar { 
       display: block; 
