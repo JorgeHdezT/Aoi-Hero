@@ -72,16 +72,16 @@ header {
 .MovilNav {
     position: absolute;
     top: 100px;
-    left: -250px;
+    left: -2000px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     background: rgb(76, 76, 76);
     height: 100%;
     width: 60%;
-    transition: all .5s;
+    transition: all .6s;
     
-}
+  }
 
 .MovilNav ul li {
     display: flex;
@@ -160,17 +160,23 @@ a.active, a:hover {
     width: 100%;
     height: 230px;
     border-top: 2px solid white;
-    background-image: url("../images/carrusel.png");
+    background-image: url("../images/carrusel415px.png");
     background-size: cover;                 
     background-repeat: no-repeat;
-    background-position: center center;  
+    background-position: center center;
 }
+
+.flecha {
+    display: none;
+}
+
 
 #slidernav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    display: none;
 }
 
 #slidernav div {
@@ -193,6 +199,23 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#ExplicacionTienda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.divisor {
+    display: flex;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(50, 50, 50);
 }
 
 #novedades  {
@@ -257,6 +280,18 @@ main {
 #caracteristicas-titulo img {
     transform: scale(90%);
     margin-bottom: -50px;
+}
+
+#prom_vid {
+    height: 150px;
+    background-size: cover;                 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/promo_vid.gif);
+}
+
+iframe {
+    width: 100%;
 }
 
 #caracteristicas {
@@ -391,6 +426,19 @@ footer {
         color: dodgerblue;
         font-size: bolder;
         font-size: 50px;;
+    }
+
+    .flecha {
+        display: block;
+    }
+    
+    
+    #slidernav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        display: all;
     }
 
     #slider {
