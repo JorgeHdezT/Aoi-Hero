@@ -308,4 +308,61 @@ footer {
   } 
  
 } 
+
+/*TABLET*/ 
+@media (min-width: 768px) { 
+  header { 
+      height: 150px; 
+  } 
+ 
+  #logo { 
+      width: 200px; 
+      height: 200px; 
+  } 
+ 
+  .imagenNavMovil { 
+      display: none; 
+  } 
+
+  .MovilNav {
+    display: none;
+}
+ 
+  #navbar { 
+      display: block; 
+      font-weight: bolder; 
+  } 
+ 
+  .OfertaProducto { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items:  center; 
+    width: 30%; 
+    margin-bottom: 5px; 
+    padding: 10px; 
+  } 
+ 
+  #ProductosEnOferta{ 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 10px; 
+  } 
+ 
+  .OfertaProducto img { 
+    width: 100%; 
+    margin-bottom: 5px; 
+  } 
+ 
+  main { 
+      margin-bottom: 180px; 
+  } 
+  footer { 
+      font-size: 20px; 
+      padding: 20px; 
+      height: 150px; 
+  } 
+ 
+} 
  

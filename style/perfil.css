@@ -220,6 +220,15 @@ input {
   padding: 10px;
 }
 
+#telefono {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+#numero-telefono {
+  width: 100%;
+}
+
 select {
   font-size: 20px;
   border: 2px solid dodgerblue;
