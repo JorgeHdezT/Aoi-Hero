@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil</title>
-  <link rel="stylesheet" href="../style/perfil.css">
+  <title>Camiseta Lazy Ninja</title>
+  <link rel="stylesheet" href="../style/productos.css">
 </head>
 <body>
   <header>
@@ -28,7 +28,9 @@
         <img class="icon" src="../images/lupa.png" alt="">
     </section>
 
-    <img id="logo" src="../images/logo 180px.png" alt="">
+    <a href="../index.html">
+      <img id="logo" src="../images/logo 180px.png" alt="">
+    </a>
 
     <section id="Cuenta">
         <a href="perfil.html">
@@ -50,105 +52,45 @@
     </ul>
   </nav>
 
-  <section id="Perfil">
-    <div id="DatosPrincipales">
-      <img id="foto_perfil" src="../images/foto_perfil.jpg" alt="">
-      <br>
-      <h3 id="NombreApellidos"><i>Nombre y apellidos del usuario</i></h3>
-      <p id="Email"><i>Correo del usuario</i></p>
-      <br>
-      <p id="EditarCuenta">Editar cuenta</p>
+  <section id="ContenedorProducto">
+
+    <div class="ImagenProducto">
+      <img src="../images/naruto back.png" alt="">
     </div>
 
-    <nav id="OpcionesCuenta">
+    <aside>
 
-      <div class="opciones">
-        <img src="../images/clock-history.svg" alt="">
-        <p>Pedidos</p>
+      <h1>Camiseta Lazy Ninja | Launch Collection</h1>
+      <h2 class="precio">18.99€</h2>
+
+      <p>Colores Disponibles:</p>
+      <div class="ContenedorColores">
+        <div class="color" id="negro"></div>
+        <div class="color" id="gris"></div>
+        <div class="color" id="blanco"></div>
       </div>
 
-      <div class="opciones">
-        <img src="../images/facturasIcon.svg" alt="">
-        <p>Facturas</p>
-      </div>
+      <p>Selecciona una talla: </p>
+      <select name="talla" id="tallaselection">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="" selected>L</option>
+        <option value="">XL</option>
+        <option value="">XXL</option>
+      </select>
 
-      <div class="opciones">
-        <img src="../images/houseIcon.svg" alt="">
-        <p>Direcciones</p>
-      </div>
+      <select name="color" id="colorselection">
+          <option value="" selected>Negro</option>
+          <option value="">Gris</option>
+          <option value="">Blanco</option>
+        </option>
+      </select>
 
-      <div class="opciones">
-        <img src="../images/discountIcon.svg" alt="">
-        <p>Descuentos</p>
-      </div>
 
-      <div class="opciones">
-        <img src="../images/closeIcon.svg" alt="">
-        <p>Cerrar Sesión</p>
-      </div>
+      <button>Añadir a la cesta</button>
 
-    </nav>
-
-    <div id="DatosPersonales">
-
-      <br>
-
-      <h2>Datos personales</h2>
-
-      <br>
-
-      <form action="">
-
-        <div id="genero">
-          
-          <input type="radio" name="" id="">
-          Sr.
-
-          <br>
-
-          <input type="radio" name="" id="">
-          Sra.
-        </div>
-        
-
-      <div id="campos">
-        <input class="info" type="text" name="nombre" id="nombre" placeholder="Nombre" pattern=".*\S+.*" required value="Nombre">
-        
-        <br>
-
-        <input class="info" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" pattern=".{5,}" required value="Apellidos">
-
-        <br>
-
-        <input class="info" type="email" id="correo" placeholder="Correo Electrónico" pattern="^[_A-Za-z0-9]+@[_A-Za-z0-9]+\.[A-Za-z]+$" required value="Correo@gmail.com" aria-errormessage="Error: Formato Inválido">
-
-        <br>
-
-        <input class="info" type="password" id="contrasena" placeholder="Contraseña" oncontextmenu="return false;" required value="Contraseña">
-        
-        <br>
-
-        <input class="info" type="password" id="nueva-contrasena" placeholder="Nueva Contraseña" oncontextmenu="return false;">
-
-        <br>
-        
-        <div id="telefono">
-          <select name="codigo-pais" id="codigo-pais">
-            <option value="+34" selected>+34</option>
-            <option value="+56" disabled>+56</option>
-          </select>
-          <input class="info" type="text" name="numero-telefono" id="numero-telefono" placeholder="Número de teléfono" pattern="[0-9]{9}" required value="000000000">
-        </div>
-
-        <br>
-
-        <input class="guardar_cambios" type="button" name="guardar-cambios" id="guardar-cambios" value="Guardar Cambios">
-
-      </div>     
-
-        
-      </form>
-    </div>
+    </aside>
   </section>
 
   <footer>

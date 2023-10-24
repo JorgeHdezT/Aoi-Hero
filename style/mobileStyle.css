@@ -201,6 +201,15 @@ main {
     flex-direction: column;
 }
 
+.producto a {
+    color: black;
+
+}
+
+.producto a {
+    color: black;
+}
+
 #ExplicacionTienda {
     display: flex;
     align-items: center;

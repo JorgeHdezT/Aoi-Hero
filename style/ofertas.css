@@ -204,8 +204,23 @@ a.active, a:hover {
   width: 50%; 
   margin-bottom: 5px; 
   padding: 10px; 
-} 
-.OfertaProducto img { 
+  
+}
+
+
+.OfertaProducto a { 
+  text-decoration: none;
+  color: black;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 50%; 
+  margin-bottom: 5px; 
+  padding: 10px; 
+}
+
+.OfertaProducto a img { 
   width: 150px; 
   margin-bottom: 5px; 
 } 
@@ -276,14 +291,18 @@ footer {
       font-weight: bolder; 
   } 
  
-  .OfertaProducto { 
+  .OfertaProducto a { 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items:  center; 
-    width: 30%; 
+    width: 100%; 
     margin-bottom: 5px; 
     padding: 10px; 
+  } 
+
+  .OfertaProducto a:hover { 
+    background-color: transparent; 
   } 
  
   #ProductosEnOferta{ 
@@ -293,7 +312,7 @@ footer {
     gap: 50px; 
   } 
  
-  .OfertaProducto img { 
+  .OfertaProducto a img { 
     width: 400px; 
     margin-bottom: 5px; 
   } 
