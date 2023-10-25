@@ -201,12 +201,11 @@ a.active, a:hover {
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
-  width: 50%; 
+  width: 50%;
   margin-bottom: 5px; 
   padding: 10px; 
   
 }
-
 
 .OfertaProducto a { 
   text-decoration: none;
@@ -215,7 +214,7 @@ a.active, a:hover {
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
-  width: 50%; 
+  width: 100%; 
   margin-bottom: 5px; 
   padding: 10px; 
 }
