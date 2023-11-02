@@ -4,10 +4,26 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  color: white;
+}
+
+@font-face {
+  font-family: "Osaka";
+  src: url("../fonts/Heroes\ Legend.ttf");
+}
+
+h1, h2, h3, h4 {
+  font-family: "Osaka";
+  /* color: #5a58DA; */
+  /* color: #FFBF47; */
+  color: rgb(0, 238, 255);
+  text-shadow: 0 0 10px rgb(0, 115, 255), 0 0 20px rgb(0, 81, 255);
 }
 html {
   min-height: 100%;
   position: relative;
+  /* background-color: rgb(48, 48, 48); */
+  background-color: #0a2540;
 }
 
 body {
@@ -203,6 +219,10 @@ button {
   border-radius: 20px;
   background-color: orange;
   font-weight: bold;
+}
+
+.precio {
+  color: white;
 }
 
 

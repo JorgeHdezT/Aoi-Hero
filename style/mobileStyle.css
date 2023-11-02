@@ -4,11 +4,26 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    font-family: "Osaka";
+    src: url("../fonts/Heroes\ Legend.ttf");
+}
+
+h1, h2, h3, h4 {
+    font-family: "Osaka";
+    /* color: #5a58DA; */
+    /* color: #FFBF47; */
+    color: rgb(0, 238, 255);
+    text-shadow: 0 0 10px rgb(0, 115, 255), 0 0 20px rgb(0, 81, 255);
 }
 html {
     min-height: 100%;
     position: relative;
-    background-color: white;
+    /* background-color: rgb(48, 48, 48); */
+    background-color: #0a2540;
 }
 
 body {
@@ -76,7 +91,9 @@ header {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background: rgb(76, 76, 76);
+    /* background: rgb(76, 76, 76); */
+    background: #0a2540;
+    box-shadow: 10px 30px 100px rgb(250, 174, 34), 10px 30px 20px rgb(250, 174, 34);
     height: 100%;
     width: 60%;
     transition: all .6s;
@@ -134,11 +151,13 @@ header {
     padding: 7px 13px;
     text-transform: uppercase;
     border-radius: 3px;
+    
 }
 
 a.active, a:hover {
     background-color: orange;
     transition: all .5s;
+    box-shadow: 0 0 10px rgb(250, 174, 34), 0 0 20px rgb(250, 174, 34);
 }
 
 /*SLIDER*/
@@ -217,14 +236,20 @@ main {
     flex-direction: column;
     text-align: center;
     padding: 20px;
+    width: 100%;
 
 }
+
+#ExplicacionTienda h1 {
+    font-size: 200%;
+}
+
 
 .divisor {
     display: flex;
     width: 80%;
     height: 2px;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
 }
 
 #novedades  {
@@ -284,6 +309,7 @@ main {
     justify-content: center;
     text-align: center;
     gap: 10px;
+    margin-top: 40px;
 }
 
 #caracteristicas-titulo img {
