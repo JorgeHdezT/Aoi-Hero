@@ -69,19 +69,41 @@ header {
     height: 30px;
 }
 
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 2000px;
+}
 .MovilNav {
     position: absolute;
-    top: 100px;
+     top: 0px;
     left: -2000px;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background: rgb(76, 76, 76);
+     background: dodgerblue;
+    box-shadow: 100px 0px 180px rgb(0, 0, 0);
     height: 100%;
-    width: 60%;
+    width: 70%;
     transition: all .6s;
-    
+    backdrop-filter: blur(50px);
   }
+
+ .MovilNav #cerrar {
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+ }
+
+ .MovilNav hr {
+    height: 1px;
+    background-color: white;
+    border: 0px solid;
+ }
 
 .MovilNav ul li {
     display: flex;
