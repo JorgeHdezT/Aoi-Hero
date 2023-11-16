@@ -6,9 +6,15 @@
   <title>Camiseta Lazy Ninja</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/productos.css">
+
 </head>
 <body>
-  <header>
+
+  <a href="#Header" id="AirButton">
+    <img src="../images/flecha.svg" alt="">
+  </a>
+
+  <header id="Header">
     <section id="Buscar">
         <div class="MovilNav_Container">
             <div class="imagenNavMovil"></div>
@@ -95,16 +101,16 @@
 
       <h1>Camiseta Lazy Ninja | Launch Collection</h1>
       <h2 class="precio">18.99€</h2>
-      <div class="rating"> 
-        <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
-        <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-        <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-        <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+      <div id="puntuacion"> 
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
       </div>
       
       <div id="detallesYEnvio">
-        <div>
+        <div id="detallesProducto">
           <p>Colores Disponibles:</p>
           <div class="ContenedorColores">
             <div class="color" id="negro"></div>
@@ -236,9 +242,7 @@
       100% ALGODÓN ORGÁNICO HILADO Y PEINADO
     </p>
 
-  </div>
-
-  <!-- TABLA CON BOOSTRAP -->
+    <!-- TABLA CON BOOSTRAP -->
   <div id="Tallas">
     <h1>Tabla de tallas: </h1>
     <table>
@@ -280,6 +284,10 @@
       </tbody>
     </table>
   </div>
+
+  </div>
+
+  
 
   <!-- FIN TABLA BOOSTRAP -->
 
@@ -352,6 +360,11 @@
 </div>
 
 <!-- FIN COMENTARIOS  o-->
+
+<section id="dudas">
+  <h2>¿Tienes alguna duda?</h2>
+  <button>¡Contáctanos!</button>
+</section>
   <footer>
     <p>Aoi Hero - By Hache</p>
     <p>2023 Todos los derechos reservados.</p>

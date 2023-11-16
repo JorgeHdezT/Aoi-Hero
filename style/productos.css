@@ -15,6 +15,33 @@ body {
   font-family: sans-serif;
 }
 
+
+#AirButton {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 3;
+  border-radius: 50%;
+  left: 360px;
+  top: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  outline: 2px solid dodgerblue;
+  padding: 20px;
+  background-color: dodgerblue !important;
+}
+#AirButton img{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter:invert();
+  
+
+}
+
 header {
   background: dodgerblue;
   height: 100px;
@@ -259,9 +286,24 @@ input:checked + .slider:before {
   width: 100%;
 }
 
+#puntuacion {
+  display: flex;
+  gap: 5px;
+}
+
+#puntuacion img {
+  width: 20px;
+}
+
 #detallesYEnvio {
   display: flex;
   gap: 20px;
+}
+
+#detallesProducto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #envio {
@@ -498,6 +540,16 @@ tbody tr, tbody td {
 /* FIN COMENTARIOS */
 
 
+/*DUDAS*/
+
+#dudas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
 /* FOOTER */
 
 footer {
@@ -513,6 +565,12 @@ footer {
 
 /*PC*/
 @media (min-width: 1281px) {
+
+  #AirButton {
+    left: 1800px;
+    top: 870px;
+  }
+
   header {
       height: 150px;
   }
