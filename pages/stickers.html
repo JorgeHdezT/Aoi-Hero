@@ -9,22 +9,34 @@
 <body>
   <header>
     <section id="Buscar">
-        <div class="MovilNav_Container">
-            <div class="imagenNavMovil"></div>
-            
-            <div class="MovilNav">
-                <input type="text" placeholder="Buscas algo?">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="ofertas.html">Ofertas %</a></li>
-                    <li><a class="active" href="">Stickers</a></li>
-                    <li><a href="">Llaveros</a></li>
-                    <li><a href="">Camisetas</a></li>
-                    <li><a href="">Tazas</a></li>
-                    <li><a href="">Sobre Nosotros</a></li>
-                </ul>
-            </div>
-        </div>
+      <div class="MovilNav_Container">
+        <div class="imagenNavMovil"></div>
+        
+        <div class="MovilNav">
+                
+          <div id="cerrar">
+              <div class="container">
+                  <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                  </label>
+                </div>
+              <!-- <button id="modoNocheBtn" class="modo-dia">Modo Noche</button> -->
+              <p>x</p>
+          </div>
+          <hr/>
+          <input type="text" placeholder="Buscas algo?">
+          <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="">Ofertas %</a></li>
+              <li><a href="stickers.html" class="active">Stickers</a></li>
+              <li><a href="">Llaveros</a></li>
+              <li><a href="">Camisetas</a></li>
+              <li><a href="">Tazas</a></li>
+              <li><a href="">Sobre Nosotros</a></li>
+          </ul>
+      </div>
+    </div>
         <img class="icon" src="../images/lupa.png" alt="">
     </section>
 
@@ -37,6 +49,7 @@
         <img class="icon" src="../images/carrito.png" alt="">
     </section>
 </header>
+  
   
   <nav id="navbar">
     <ul>
@@ -152,5 +165,7 @@
         .catch(error => console.error('Error al cargar la vista:', error));
 }
 </script>
+
+<script src="../js/nightMode.js"></script>
 </body>
 </html>
