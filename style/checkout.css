@@ -1,0 +1,549 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  html {
+    min-height: 100%;
+    position: relative;
+    background-color: white;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  
+  #AirButton {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    outline: 2px solid dodgerblue;
+    padding: 20px;
+    background-color: dodgerblue !important;
+    bottom: 0;
+    right: 0;
+  }
+  #AirButton img{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter:invert();
+    
+  
+  }
+  
+  header {
+    background: dodgerblue;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #Buscar {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #Buscar .imagenNavMovil {
+    background-image: url(../images/menu.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    filter:invert();
+    display: visible;
+    transition: all 0.25s;
+  }
+  
+  
+  .MovilNav_Container input {
+    margin: 10px;
+    height: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: url("https://assets.digitalocean.com/labs/icons/search.svg") no-repeat 95% 50% rgb(255, 255, 255);
+    background-size: 20px;
+  }
+  
+  .MovilNav_Container:hover .MovilNav  {
+    left: 0;
+  }
+  
+  #Buscar .imagenNavMovil:hover {
+    background-image: url(../images/closeIcon.svg);
+    width: 30px;
+    height: 30px;
+  }
+  
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 2000px;
+    z-index: 1;
+  }
+  .MovilNav {
+    position: absolute;
+     top: 0px;
+    left: -2000px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+     background: dodgerblue;
+    box-shadow: 100px 0px 180px rgb(0, 0, 0);
+    height: 100%;
+    width: 70%;
+    transition: all .6s;
+    backdrop-filter: blur(50px);
+  }
+  
+  .MovilNav #cerrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+  }
+  
+  /* switch modo noche */
+  .switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: snow;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    z-index: 2;
+    background-color: rgb(255, 208, 0);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #0a2540;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: white;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+  /*Fin switch modo noche*/
+  
+  .MovilNav hr {
+    height: 1px;
+    background-color: white;
+    border: 0px solid;
+  }
+  
+  .MovilNav ul li {
+    display: flex;
+  }
+  .MovilNav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /*fin navegacion movil*/
+  
+  
+  #Cuenta {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+  }
+  
+  #logo {
+    width: 140px;
+    height: 140px;
+  }
+  
+  #navbar {
+    background-color: dodgerblue;
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  #navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #navbar ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  
+  #navbar a.active, #navbar a:hover {
+    background-color: orange;
+    transition: all .5s;
+  }
+  
+  
+  /*CHECKOUT MAIN*/
+
+  .checkoutNav {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .checkoutNav p {
+    border: 2px solid gray;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-top-right-radius: 15px;
+  }
+
+  .seleccionado {
+    background-color: aquamarine !important;
+  }
+  
+  .productos {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #Carrito {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    & #espacioBlanco{
+        width: 20px;
+    }
+  }
+
+  #cabeceraCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #productosEnCesta {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+
+  #productosEnCesta article img {
+    width: 35%;
+    border-radius: 10px;
+  }
+
+  .infoProducto {
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  #accionesCesta {
+    margin-top: 20px;
+  }
+  #accionesCesta img {
+    width: 25px;
+    height: 25px;
+    margin-left: -15px;
+    margin-top: 50px;
+    position: relative;
+    float: right;
+
+  }
+
+  #accionesCesta p{
+    font-size: 20px;
+
+  }
+
+  .promoCode {
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button {
+    width: 120px;
+    border: 0px;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 20px;
+    display: flex;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  #anterior {
+    background-color: aquamarine;
+  }
+  #siguiente {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+ #cancelar {
+    background-color: red;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+ } 
+
+
+
+  /*FINAL DE CHECKOUT MAIN*/
+  
+  
+  /* FOOTER */
+  
+  footer {
+    width: 100%;
+    position: absolute;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  /*RESPONSIVIDAD*/
+  
+  /*PC*/
+  @media (min-width: 1281px) {
+  
+    #AirButton {
+      left: 1800px;
+      top: 870px;
+    }
+  
+    header {
+        height: 150px;
+    }
+  
+    #logo {
+        width: 200px;
+        height: 200px;
+    }
+  
+    .imagenNavMovil { 
+      display: none; 
+    } 
+  
+    .MovilNav {
+      display: none;
+    }
+  
+    #navbar {
+        display: block;
+        font-weight: bolder;
+    }
+  
+    /*Contenido del main*/
+  
+    main {
+      margin-bottom: 180px;
+    }
+  
+    #ContenedorProducto {
+      margin-top: 20px;
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+  
+    .ImagenProducto {
+      width: 40%;
+      height: 100%;
+      transition: transform 0.3s, box-shadow 0.3s;
+  
+    }
+  
+    .ImagenProducto img {
+      border-radius: 20px;
+    }
+  
+    #carouselExampleAutoplaying {
+      width: 40%;
+    }
+  
+    aside {
+      font-size: 20px;
+      width: 100%;
+    }
+  
+    table {
+      border: 1px solid gray;
+      width: 500px;
+    }
+  
+  
+    /*Fin del contenido del main*/
+  
+    footer {
+        font-size: 20px;
+        padding: 20px;
+        height: 150px;
+    }
+  
+  }
+  
+  /* Tablet */
+  
+  @media ((min-width: 768px) and (max-width: 1200px)) {
+    header {
+      height: 150px;
+  }
+  
+  #logo {
+      width: 200px;
+      height: 200px;
+  }
+  
+  .imagenNavMovil { 
+    display: none; 
+  } 
+  
+  .MovilNav {
+    display: none;
+  }
+  
+  #navbar {
+      display: block;
+      font-weight: bolder;
+  }
+  
+  /*Contenido del main*/
+  
+  main {
+    margin-bottom: 180px;
+  }
+  
+  #ContenedorProducto {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  
+  .ImagenProducto {
+    width: 80%;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+  }
+  
+  .ImagenProducto img {
+    border-radius: 20px;
+  }
+  
+  #carouselExampleAutoplaying {
+    width: 50%;
+  }
+  
+  aside {
+    font-size: 20px;
+  }
+  
+  table {
+    border: 1px solid gray;
+  }
+  
+  
+  /*Fin del contenido del main*/
+  
+  footer {
+      font-size: 20px;
+      padding: 20px;
+      height: 150px;
+  }
+  }
+  
+  
+  
+  
+  
