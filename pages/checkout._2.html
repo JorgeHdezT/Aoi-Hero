@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
-  <link rel="stylesheet" href="../style/checkout.css">
+  <link rel="stylesheet" href="../style/checkout_2.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
@@ -65,80 +65,83 @@
   </nav>
 
   
-  <section id="Carrito">
-    <div id="cabeceraCarrito">
+  <section id="Envio">
+    <div id="cabeceraEnvio">
         <div style="font-weight: bold; font-size: 25px; width: 20px;">&#x3c;</div>
-        <h1>Mi cesta</h1>
+        <h1>Dirección de Envío</h1>
         <div id="espacioBlanco"></div>
     </div>
 
     <div class="checkoutNav">
-      <p class="seleccionado">Mi Cesta</p>
-      <p>Dirección de Envío</p>
+      <p>Mi Cesta</p>
+      <p class="seleccionado">Dirección de Envío</p>
       <p>Método de Pago</p>
       <p>Confirmar Compra</p>
     </div>
 
-    <div id="productosEnCesta">
+    <section class="envioMain">
+      <p style="text-align: center;"><b>Selecciona una dirección</b></p>
 
-        <article class="productos">
-          
-          <img src="../images/naruto front.png" alt="">
+      <div class="direcciones">
+        <input type="radio" name="selected" id="">
 
-            <div class="infoProducto">
-                <p>Camiseta Lazy Ninja</p>
-                <p><b>18.99 €</b></p>
-                <p style="color: gray;">Negro/L EU</p>
+        <img src="../images/houseIcon.svg" alt="">
 
-                <div id="accionesCesta">
-                  <p>- 1 +</p>
-                  <br>
-                  <img src="../images/papelera.svg" alt="">
-                  <img src="../images/outCart.png" alt="" style="width: 30px">
-                    
-                </div>
-            </div>
-        </article>
+        <div>
+          <p>Enviar a</p>
+          <b>Mi Oficina</b>
+        </div>
 
-        <article class="productos">
-          
-          <img src="../images/cantimplora.png" alt="">
+        <p>Editar dirección</p>
 
-            <div class="infoProducto">
-                <p>Camiseta Lazy Ninja</p>
+      </div>
 
-                <div style="display: flex; gap: 5px;">
-                  <p style="text-decoration:  line-through !important;">9.99 €</p>
-                  <b>5.99 €</b>
-                </div>
-                
-              
-                <p><i style="color: rgb(15, 180, 0)">Promo-Code: $2DAWA$</i></p>
-                <p style="color: gray;">Negro/L EU</p>
 
-                <div id="accionesCesta">
-                  <p>- 1 +</p>
-                  <br>
-                    <img src="../images/papelera.svg" alt="">
-                    <img src="../images/outCart.png" alt="" style="width: 30px">
-                </div>
-            </div>
-        </article>
+      <div class="direcciones" id="selectedDir">
+        <input type="radio" name="selected" id="" checked>
 
-    </div>
+        <img src="../images/houseIcon.svg" alt="">
 
-    <section class="promoCode">
-      <p><b>Código Promocional</b></p>
-      <p style="color: gray;">Añadir código</p>
+        <div>
+          <p>Enviar a</p>
+          <b>Mi Casa</b>
+        </div>
+
+        <p>Editar dirección</p>
+
+      </div>
+
+      <div class="direcciones">
+        <input type="radio" name="selected" id="">
+
+        <div>
+          <p><b>Nombre de la calle</b></p>
+          <p>Portal, Número, Piso, Puerta</p>
+        </div>
+
+        <p>Editar dirección</p>
+
+      </div>
+
     </section>
 
+    <div id="separador">
+      <div></div>
+    </div>
+
+    <div class="direcciones" id="selectedDir">
+      <p><b>Añadir una nueva dirección</b></p>
+    </div>
+
+    
+
     <div class="botones">
-      <a href="camisetaNaruto.html">
+      <a href="checkout._1.html">
         <button class="button" id="anterior">
           Atrás
         </button>
       </a>
-      <a href="checkout._2.html">
+      <a href="checkout_3.html">
         <button class="button" id="siguiente">
           Siguiente
         </button>

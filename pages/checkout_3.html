@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
-  <link rel="stylesheet" href="../style/checkout.css">
+  <link rel="stylesheet" href="../style/checkout_3.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
@@ -65,80 +65,102 @@
   </nav>
 
   
-  <section id="Carrito">
-    <div id="cabeceraCarrito">
+  <section id="Envio">
+    <div id="cabeceraEnvio">
         <div style="font-weight: bold; font-size: 25px; width: 20px;">&#x3c;</div>
-        <h1>Mi cesta</h1>
+        <h1>Método de Pago</h1>
         <div id="espacioBlanco"></div>
     </div>
 
     <div class="checkoutNav">
-      <p class="seleccionado">Mi Cesta</p>
+      <p>Mi Cesta</p>
       <p>Dirección de Envío</p>
-      <p>Método de Pago</p>
+      <p class="seleccionado">Método de Pago</p>
       <p>Confirmar Compra</p>
     </div>
 
-    <div id="productosEnCesta">
+    <section class="envioMain">
 
-        <article class="productos">
-          
-          <img src="../images/naruto front.png" alt="">
+      <div class="Tarjeta">
+        <div id="logoAjustes">
+          <img src="../images/visa.png" alt="">
+          <img src="../images/engranaje.png" alt="" style="width: 30px; height: 30px;">
+        </div>
 
-            <div class="infoProducto">
-                <p>Camiseta Lazy Ninja</p>
-                <p><b>18.99 €</b></p>
-                <p style="color: gray;">Negro/L EU</p>
+        <div id="digitos">
+          <p>****</p>
+          <p>****</p>
+          <p>****</p>
+          <p>2034</p>
+        </div>
 
-                <div id="accionesCesta">
-                  <p>- 1 +</p>
-                  <br>
-                  <img src="../images/papelera.svg" alt="">
-                  <img src="../images/outCart.png" alt="" style="width: 30px">
-                    
-                </div>
-            </div>
-        </article>
+        <div id="nombreCVV">
+          <p>JORGE HERNÁNDEZ</p>
+          <P>12/10</P>
+        </div>
 
-        <article class="productos">
-          
-          <img src="../images/cantimplora.png" alt="">
+      </div>
 
-            <div class="infoProducto">
-                <p>Camiseta Lazy Ninja</p>
+      <p style="text-align: center;"><b>Selecciona un método de pago</b></p>
 
-                <div style="display: flex; gap: 5px;">
-                  <p style="text-decoration:  line-through !important;">9.99 €</p>
-                  <b>5.99 €</b>
-                </div>
-                
-              
-                <p><i style="color: rgb(15, 180, 0)">Promo-Code: $2DAWA$</i></p>
-                <p style="color: gray;">Negro/L EU</p>
 
-                <div id="accionesCesta">
-                  <p>- 1 +</p>
-                  <br>
-                    <img src="../images/papelera.svg" alt="">
-                    <img src="../images/outCart.png" alt="" style="width: 30px">
-                </div>
-            </div>
-        </article>
+      <div class="metodos">
+        <input type="radio" name="selected" id="">
+
+        <img src="../images/mastercard.png" alt="">
+        <div>
+          <b>Tarjeta de crédito</b>
+          <p>Ninguna añadida aún</p>
+        </div>
+
+        <p>Agregar...</p>
+
+      </div>
+
+
+      <div class="metodos" id="selectedMethod">
+        <input type="radio" name="selected" id="" checked>
+
+        <img src="../images/visa2.svg" alt="">
+
+        <div>
+          <b>Tarjeta de crédito</b>
+          <p>**** **** **** 2034</p>
+        </div>
+
+        <p>Editar...</p>
+
+      </div>
+
+      <div class="metodos">
+        <input type="radio" name="selected" id="">
+
+        <img src="../images/paypal.png" alt="" style="width: 40px;"> 
+        <div>
+          <p><b>PayPal</b></p>
+          <p>Sin configurar aún...</p>
+        </div>
+
+        <p>Agregar...</p>
+
+      </div>
+
+    </section>
+
+    <div id="separador"></div>
+
+    <div class="metodos" style="background-color: rgba(30, 143, 255, 0.455);">
+      <b>Añadir Un Nuevo Método</b>
 
     </div>
 
-    <section class="promoCode">
-      <p><b>Código Promocional</b></p>
-      <p style="color: gray;">Añadir código</p>
-    </section>
-
     <div class="botones">
-      <a href="camisetaNaruto.html">
+      <a href="checkout._2.html">
         <button class="button" id="anterior">
           Atrás
         </button>
       </a>
-      <a href="checkout._2.html">
+      <a href="checkout._4.html">
         <button class="button" id="siguiente">
           Siguiente
         </button>

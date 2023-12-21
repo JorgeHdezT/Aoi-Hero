@@ -247,7 +247,7 @@
   }
   
   
-  /*CHECKOUT MAIN*/
+  /*SIHHPING MAIN*/
 
   .checkoutNav {
     display: flex;
@@ -274,13 +274,8 @@
     font-weight: bold;
     color: rgb(69, 45, 0);
   }
-  
-  .productos {
-    display: flex;
-    margin-top: 20px;
-  }
 
-  #Carrito {
+  #Envio {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -290,58 +285,50 @@
     }
   }
 
-  #cabeceraCarrito {
+  #cabeceraEnvio {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+  
 
-  #productosEnCesta {
-    background-color: rgba(30, 143, 255, 0.475);
-    border-radius: 10px;
-    padding: 10px;
+  /*EnvioMain*/
+
+  .envioMain {
     margin-top: 20px;
   }
 
-
-  #productosEnCesta article img {
-    width: 35%;
-    border-radius: 10px;
-  }
-
-  .infoProducto {
-    margin-left: 20px;
-    width: 100%;
-  }
-
-  .productos:last-child {
-    margin-bottom: 20px;
-  }
-
-  #accionesCesta img {
-    width: 25px;
-    height: 25px;
-    margin-left: -15px;
+  .direcciones {
     margin-top: 20px;
-    position: relative;
-    float: right;
-  }
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 5px;
 
-  #accionesCesta p{
-    font-size: 20px;
-
-  }
-
-  .promoCode {
-    width: 100%;
-    background-color: rgba(30, 143, 255, 0.475);
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 10px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
   }
 
+  .direcciones img {
+    width: 40px;
+  }
+
+  #selectedDir {
+    background-color: rgba(30, 143, 255, 0.466);
+  }
+
+  #separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #separador div {
+    height: 10px;
+    width: 100px;
+    background-color: rgba(30, 143, 255, 0.468);
+    border-radius: 20px;
+    margin-top: 30px;
+  }
   .button {
     width: 120px;
     border: 0px;
@@ -358,7 +345,8 @@
   .botones {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
 
   #anterior {

@@ -247,7 +247,7 @@
   }
   
   
-  /*CHECKOUT MAIN*/
+  /*SIHHPING MAIN*/
 
   .checkoutNav {
     display: flex;
@@ -274,13 +274,8 @@
     font-weight: bold;
     color: rgb(69, 45, 0);
   }
-  
-  .productos {
-    display: flex;
-    margin-top: 20px;
-  }
 
-  #Carrito {
+  #Envio {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -290,58 +285,84 @@
     }
   }
 
-  #cabeceraCarrito {
+  #cabeceraEnvio {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+  
 
-  #productosEnCesta {
-    background-color: rgba(30, 143, 255, 0.475);
-    border-radius: 10px;
-    padding: 10px;
+  /*EnvioMain*/
+
+  .envioMain {
     margin-top: 20px;
   }
 
-
-  #productosEnCesta article img {
-    width: 35%;
+  .Tarjeta {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
+    padding: 20px;
+    color: white;
+    background: rgb(153,0,201);
+    background: linear-gradient(155deg, rgba(153,0,201,1) 10%, rgba(29,51,253,1) 50%, rgba(0,255,250,1) 100%); 
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   }
 
-  .infoProducto {
-    margin-left: 20px;
-    width: 100%;
-  }
-
-  .productos:last-child {
-    margin-bottom: 20px;
-  }
-
-  #accionesCesta img {
-    width: 25px;
-    height: 25px;
-    margin-left: -15px;
-    margin-top: 20px;
-    position: relative;
-    float: right;
-  }
-
-  #accionesCesta p{
-    font-size: 20px;
-
-  }
-
-  .promoCode {
-    width: 100%;
-    background-color: rgba(30, 143, 255, 0.475);
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 10px;
+  #logoAjustes {
     display: flex;
     justify-content: space-between;
   }
 
+  #logoAjustes img {
+    width: 80px;
+    filter: invert();
+  }
+
+  #digitos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  #nombreCVV {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  .metodos {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .metodos img {
+    width: 60px;
+  }
+
+  #selectedMethod {
+    background-color: rgba(30, 143, 255, 0.479);
+  }
+
+  #separador {
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(30, 143, 255, 0.429);
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+  }
+  
   .button {
     width: 120px;
     border: 0px;
@@ -358,7 +379,8 @@
   .botones {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
 
   #anterior {
