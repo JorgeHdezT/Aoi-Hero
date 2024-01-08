@@ -275,6 +275,16 @@
     color: rgb(69, 45, 0);
   }
 
+  .checkoutNav p:nth-child(1) {
+    background-color: rgb(38, 99, 119);
+    color: rgb(225, 225, 225);
+  }
+
+  .checkoutNav p:nth-child(2) {
+    background-color: rgb(38, 99, 119);
+    color: rgb(225, 225, 225);
+  }
+
   #Envio {
     display: flex;
     flex-direction: column;
@@ -451,6 +461,35 @@
     main {
       margin-bottom: 180px;
     }
+
+    #Envio {
+      background-color: snow;
+      margin-left: 30%;
+      margin-right: 30%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    body {
+      background-color: rgb(185, 228, 255)
+    }
+
+
+    .Tarjeta {
+      width: 400px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    
+    .metodos {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    #separador {
+      margin-left: 40%;
+      margin-right: 40%;
+    }
+
   
     /*Fin del contenido del main*/
   
