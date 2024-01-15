@@ -342,6 +342,38 @@
     justify-content: space-between;
   }
 
+  #productosSimilares {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #productosSimilares div {
+    overflow: scroll;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    
+  }
+
+  #productosSimilares div article {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    
+  }
+
+  #productosSimilares div article img {
+    width: 200px;
+  }
+
   .button {
     width: 120px;
     border: 0px;
@@ -502,9 +534,24 @@
   main {
     margin-bottom: 180px;
   }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+
+  #Carrito {
+    width: 70%;
+    margin-bottom: 100px;
+  }
   /*Fin del contenido del main*/
   
   footer {
+      position: relative;
       font-size: 20px;
       padding: 20px;
       height: 150px;
