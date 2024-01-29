@@ -2,12 +2,13 @@ const modoNocheBtn = document.getElementById("checkbox");
     const body = document.body;
     const header = document.querySelector('body > header');
     const navBar_movil = document.querySelector('body .MovilNav');
-    const html = document.querySelector('html');
-    const ArticleText = document.querySelectorAll('.OfertaProducto a p');
-    const MainArticleText = document.querySelectorAll('.producto a p');
-    const OpcionesCuenta = document.querySelectorAll('#OpcionesCuenta div img');
-    
+    const h2 = document.querySelectorAll("h2");
 
+    h2.forEach(element => {
+        element.style.color = "#000";
+        });
+
+    }
 
     modoNocheBtn.addEventListener("click", () => {
         body.classList.toggle("modo-noche");
@@ -19,10 +20,10 @@ const modoNocheBtn = document.getElementById("checkbox");
         header.style.backgroundColor = "#0052a3";
         navBar_movil.style.backdropfilter = "blur(10%)";
         navBar_movil.style.backgroundColor = "transparent";
-        html.style.backgroundColor = "#0a2540";
-        ArticleText.forEach(parrafo => parrafo.style.color = 'white');
-        MainArticleText.forEach(parrafo => parrafo.style.color = 'white');
-        OpcionesCuenta.forEach(imagen => imagen.style.filter = 'invert(1)');
+
+        h2.forEach(element => {
+        element.style.color = "#fff";
+        });
     
         } else {
         modoNocheBtn.textContent = "Modo Noche";
@@ -32,7 +33,11 @@ const modoNocheBtn = document.getElementById("checkbox");
         header.style.backgroundColor = "";
         navBar_movil.style.backdropfilter = "";
         navBar_movil.style.backgroundColor = "";
-        html.style.backgroundColor = "";
+
+        h2.forEach(element => {
+            element.style.color = "#000";
+            });
+
         }
 });
 

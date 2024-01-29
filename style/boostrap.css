@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(2, 2, 12);
+}
+
+.navbar { 
+  background-color: dodgerblue;
+}
+
+.navbar-text, .navbar-brand, .navbar-link {
+  color: white;
+}

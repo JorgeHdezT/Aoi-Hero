@@ -1,0 +1,638 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  position: relative;
+  background-color: white;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background: dodgerblue;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+#Buscar {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#Buscar .imagenNavMovil {
+  background-image: url(../images/menu.png);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  filter:invert();
+  display: visible;
+  transition: all 0.25s;
+}
+
+
+.MovilNav_Container input {
+  margin: 10px;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: url("https://assets.digitalocean.com/labs/icons/search.svg") no-repeat 95% 50% rgb(255, 255, 255);
+  background-size: 20px;
+}
+
+.MovilNav_Container:hover .MovilNav  {
+  left: 0;
+}
+
+#Buscar .imagenNavMovil:hover {
+  background-image: url(../images/closeIcon.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 2000px;
+}
+.MovilNav {
+  position: absolute;
+   top: 0px;
+  left: -2000px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+   background: dodgerblue;
+  box-shadow: 100px 0px 180px rgb(0, 0, 0);
+  height: 100%;
+  width: 70%;
+  transition: all .6s;
+  backdrop-filter: blur(50px);
+}
+
+.MovilNav #cerrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+}
+
+/* switch modo noche */
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  background-color: snow;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  z-index: 2;
+  background-color: rgb(255, 208, 0);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #0a2540;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: white;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.MovilNav hr {
+  height: 1px;
+  background-color: white;
+  border: 0px solid;
+}
+
+.MovilNav ul li {
+  display: flex;
+}
+.MovilNav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+/*fin navegacion movil*/
+
+#Cuenta {
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+#logo {
+  width: 140px;
+  height: 140px;
+}
+
+#navbar {
+  background-color: dodgerblue;
+  /* border-top: 2px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+
+#navbar ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+a.active, a:hover {
+  background-color: orange;
+  transition: all .5s;
+}
+
+/*SLIDER*/
+
+
+
+
+
+
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+}
+
+#tabla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #333;
+}
+
+th, td {
+  padding: 5px;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  border: 10px solid rgba(30, 143, 255, 0.749);
+  border-radius: 5px;
+}
+
+
+
+#imagenesMuestra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+  border: 10px solid rgba(30, 143, 255, 0.749);
+  border-radius: 5px;
+}
+
+#imagenesMuestra img {
+  width: 50%;
+  transition: all .25s;
+}
+#imagenesMuestra img:last-child {
+  width: 100%;
+}
+#imagenesMuestra img:hover {
+  transform: scale(1.15);
+  border-radius: 10px;
+  border: 5px solid rgba(30, 143, 255, 0.749);
+  z-index: 2;
+  box-shadow: 0px 0px 10px rgb(0, 213, 255), 0px 0px 20px rgb(0, 213, 255);
+}
+
+
+#imagenesGraficos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+  border: 10px solid rgba(30, 143, 255, 0.749);
+  border-radius: 5px;
+}
+
+#imagenesGraficos img {
+  width: 50%;
+  transition: all .25s;
+}
+
+#imagenesGraficos img:hover {
+  transform: scale(1.15);
+  border-radius: 10px;
+  border: 5px solid rgba(30, 143, 255, 0.749);
+  z-index: 2;
+  box-shadow: 0px 0px 10px rgb(0, 213, 255), 0px 0px 20px rgb(0, 213, 255);
+}
+
+
+main h1 {
+  color: dodgerblue;
+  text-shadow: 0px 4px 0px rgb(0, 0, 0),0px 4px 0px rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+main a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+}
+
+details {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 187, 255, 0.353);
+  width: 100%;
+}
+
+summary {
+  padding: 10px;
+}
+
+
+
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  position: absolute;
+  background-color: dodgerblue;
+  height: 100px;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+}
+
+/*RESPONSIVIDAD*/
+
+/*PC*/
+@media (min-width: 1281px) {
+  header {
+      height: 150px;
+  }
+
+  #logo {
+      width: 200px;
+      height: 200px;
+  }
+
+  .imagenNavMovil {
+      display: none;
+  }
+
+  .MovilNav {
+      display: none;
+  }
+
+  #navbar {
+      display: block;
+      font-weight: bolder;
+  }
+
+  #carrusel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin: 5px;
+      color: dodgerblue;
+      font-size: bolder;
+      font-size: 50px;;
+  }
+
+  .flecha {
+      display: block;
+  }
+  
+  
+  #slidernav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      display: all;
+  }
+
+  #slider {
+      height: 600px;
+      width: 1500px;
+      background-image: url(../images/carrusel\ PC.png);                  
+  }
+
+  #slidernav div {
+      width: 30px;
+      height: 30px;;
+  }
+
+  #novedades  {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+  
+  }
+  
+  .producto{
+      margin-top: -60px;
+      width: 40%;
+      font-size: 25px;
+  }
+
+  .producto p {
+      margin-left: 70px;
+      margin-top: -60px;
+  }
+  
+  .imagenproducto {
+      transform: scale(80%);
+      width: 100%;
+      height: 1000px;
+      margin: 0 auto;
+      transition: all 1s;
+      /* width: 170px;
+      height: 250px;
+      margin: 0 auto;
+      transition: all 1s; */
+  }
+
+  #caracteristicas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .explicacion {
+      width: 30%;
+      height: 100%;
+      gap: 20px;
+  }
+
+  #imagen1, #imagen2 {
+      margin: 0 auto;
+      width: 100%;
+      height: 300px;
+      background-image: url("../images/explicacion.jpeg");
+      background-size: cover;                 
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+
+  #caracteristicas-titulo {
+      width: 1000px;
+  }
+
+  main {
+      margin-bottom: 180px;
+  }
+  footer {
+      font-size: 20px;
+      padding: 20px;
+      height: 150px;
+  }
+
+}
+
+/*TABLET*/
+
+@media ((min-width: 768px) and (max-width: 1200px)) {
+  header {
+      height: 150px;
+  }
+
+  #logo {
+      width: 200px;
+      height: 200px;
+  }
+
+  .imagenNavMovil {
+      display: none;
+  }
+
+  .MovilNav {
+      display: none;
+  }
+
+  #navbar {
+      display: block;
+      font-weight: bolder;
+  }
+
+  #carrusel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin: 5px;
+      color: dodgerblue;
+      font-size: bolder;
+      font-size: 50px;;
+  }
+
+  .flecha {
+      display: block;
+  }
+  
+  
+  #slidernav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      display: all;
+  }
+
+  #slider {
+      height: 250px;
+      width: 100%;
+      background-image: url(../images/carrusel\ PC.png);                  
+  }
+
+  #slidernav div {
+      width: 30px;
+      height: 30px;;
+  }
+
+  #novedades  {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+  
+  }
+  
+  .producto{
+      margin-top: 0px;
+      width: 50%;
+      padding: 10px;
+      font-size: 25px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+  }
+
+  .producto p {
+      text-align: center;
+      margin-left: 0px;
+      margin-top: 0px;
+  }
+  
+  .imagenproducto {
+      transform: scale(80%);
+      width: 100%;
+      height: 500px;
+      margin: 0 auto;
+      transition: all 1s;
+      /* width: 170px;
+      height: 250px;
+      margin: 0 auto;
+      transition: all 1s; */
+  }
+
+  #caracteristicas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .explicacion {
+      width: 30%;
+      height: 100%;
+      gap: 20px;
+  }
+
+  #imagen1, #imagen2 {
+      margin: 0 auto;
+      width: 100%;
+      height: 300px;
+      background-image: url("../images/explicacion.jpeg");
+      background-size: cover;                 
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+
+  #caracteristicas-titulo {
+      width: 100%;
+  }
+
+  #caracteristicas-titulo img {
+      transform: scale(80%);
+  }
+
+  #prom_vid {
+      width: 100%;
+  }
+
+  main {
+      margin-bottom: 180px;
+  }
+  footer {
+      font-size: 20px;
+      padding: 20px;
+      height: 150px;
+  }
+
+}
