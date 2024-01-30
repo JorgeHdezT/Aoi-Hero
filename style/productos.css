@@ -15,6 +15,33 @@ body {
   font-family: sans-serif;
 }
 
+
+#AirButton {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  outline: 2px solid dodgerblue;
+  padding: 20px;
+  background-color: dodgerblue !important;
+  bottom: 0;
+  right: 0;
+}
+#AirButton img{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter:invert();
+  
+
+}
+
 header {
   background: dodgerblue;
   height: 100px;
@@ -238,11 +265,51 @@ input:checked + .slider:before {
   width: 100%;
 }
 
+.miniaturas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.miniaturas img{
+  width: 20%;
+  padding: 5px;
+  border: 1px solid dodgerblue;
+}
+
 #ContenedorProducto aside {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  width: 100%;
+}
+
+#puntuacion {
+  display: flex;
+  gap: 5px;
+}
+
+#puntuacion img {
+  width: 20px;
+}
+
+#detallesYEnvio {
+  display: flex;
+  gap: 20px;
+}
+
+#detallesProducto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#envio {
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px black;
 }
 
 .ContenedorColores {
@@ -263,11 +330,11 @@ input:checked + .slider:before {
   background: gray;
 }
 #nblanco {
-  background: #fff;
+  background: white !important;
 }
 
 select {
-  width: 20%;
+  width: 40%;
   padding: 5px;
   background-color: dodgerblue;
   color: white;
@@ -275,13 +342,37 @@ select {
   font-size: 12px;
 }
 
+/*cantidades de compra*/
+
+#Cantidades {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#Cantidades button {
+  width: 50px;
+}
+#quantity {
+  width: 50px;
+  text-align: center;
+}
+
+/*FIN cantidades de compra*/
+
 button {
-  width: 35%;
+  width: 200px;
   height: 30px;
-  border: 0px solid;
+  background-color: white;
+  border: 2px solid orange;
   border-radius: 20px;
-  background-color: orange;
   font-weight: bold;
+}
+
+#comprarfoccus {
+  background-color: orange !important;
+  box-shadow: 0px 0px 10px orange;
+  text-shadow: 0px 0px 10px white;
 }
 
 .vista-previa {
@@ -297,11 +388,68 @@ button {
   border: 2px solid dodgerblue;
   padding: 5px;
 }
+
+
+/*INFORMACION*/
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(30, 191, 255, 0.397);
+  backdrop-filter: blur(10px);
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.informacion a {
+  font-size: 20px;
+  text-decoration: none;
+  background-color: orange;
+  text-align: center;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  transform: scale(1);
+}
+
+.hazmeclick {
+  animation: hazmeclick-animation .75s infinite alternate;
+}
+
+@keyframes hazmeclick-animation {
+  from {
+    transform: scale(1);
+    box-shadow: 0px 0px 0px white;
+  }
+
+  to {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white;
+  }
+}
+
 /* TALBA DE TALLAS */
 #Tallas {
   margin-top: 20px;
-  border: 2px solid gray;
   padding: 20px;
+}
+
+table {
+  border: 1px solid gray;
+  width: 200px;
+}
+
+table tbody {
+  border: 1px solid blue;
+}
+
+tbody tr, tbody td {
+  border: 1px solid gray;
+  padding: 5px;
 }
 /* FIN TABLA DE TALLAS */
 
@@ -392,6 +540,16 @@ button {
 /* FIN COMENTARIOS */
 
 
+/*DUDAS*/
+
+#dudas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
 /* FOOTER */
 
 footer {
@@ -407,6 +565,12 @@ footer {
 
 /*PC*/
 @media (min-width: 1281px) {
+
+  #AirButton {
+    left: 1800px;
+    top: 870px;
+  }
+
   header {
       height: 150px;
   }
@@ -437,10 +601,10 @@ footer {
 
   #ContenedorProducto {
     margin-top: 20px;
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 2fr 1.5fr;
     overflow: hidden;
+    padding: 20px;
   }
   
 
@@ -455,8 +619,18 @@ footer {
     border-radius: 20px;
   }
 
+  #carouselExampleAutoplaying {
+    width: 40%;
+  }
+
   aside {
     font-size: 20px;
+    width: 100%;
+  }
+
+  table {
+    border: 1px solid gray;
+    width: 500px;
   }
 
 
@@ -503,9 +677,8 @@ main {
 
 #ContenedorProducto {
   margin-top: 20px;
-  display: grid;
+  display: flex;
   width: 100%;
-  grid-template-columns: 2fr 1.5fr;
   overflow: hidden;
 }
 
@@ -521,8 +694,16 @@ main {
   border-radius: 20px;
 }
 
+#carouselExampleAutoplaying {
+  width: 50%;
+}
+
 aside {
   font-size: 20px;
+}
+
+table {
+  border: 1px solid gray;
 }
 
 

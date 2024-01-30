@@ -6,9 +6,15 @@
   <title>Camiseta Lazy Ninja</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/productos.css">
+
 </head>
 <body>
-  <header>
+
+  <a href="#Header" id="AirButton">
+    <img src="../images/flecha.svg" alt="">
+  </a>
+
+  <header id="Header">
     <section id="Buscar">
         <div class="MovilNav_Container">
             <div class="imagenNavMovil"></div>
@@ -29,8 +35,8 @@
               <input type="text" placeholder="Buscas algo?">
               <ul>
                   <li><a class="active" href="">Inicio</a></li>
-                  <li><a href="pages/ofertas.html">Ofertas %</a></li>
-                  <li><a href="pages/stickers.html">Stickers</a></li>
+                  <li><a href="ofertas.html">Ofertas %</a></li>
+                  <li><a href="stickers.html">Stickers</a></li>
                   <li><a href="">Llaveros</a></li>
                   <li><a href="">Camisetas</a></li>
                   <li><a href="">Tazas</a></li>
@@ -70,10 +76,10 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../images/naruto front.png" class="d-block w-100" alt="...">
+          <img src="../images/naruto front.png" class="d-flex w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../images/naruto back.png" class="d-block w-100" alt="...">
+          <img src="../images/naruto back.png" class="d-flex w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -85,9 +91,9 @@
         <span class="visually-hidden">Next</span>
       </button>
 
-      <div class="vista-previa">
-        <img src="../images/naruto front.png" alt="">
+      <div class="miniaturas">
         <img src="../images/naruto back.png" alt="">
+        <img src="../images/naruto front.png" alt="">
       </div>
     </div>
 
@@ -95,85 +101,201 @@
 
       <h1>Camiseta Lazy Ninja | Launch Collection</h1>
       <h2 class="precio">18.99€</h2>
-
-      <p>Colores Disponibles:</p>
-      <div class="ContenedorColores">
-        <div class="color" id="negro"></div>
-        <div class="color" id="gris"></div>
-        <div class="color" id="blanco"></div>
+      <div id="puntuacion"> 
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
+        <img src="../images/estrella.svg" alt="">
       </div>
+      
+      <div id="detallesYEnvio">
+        <div id="detallesProducto">
+          <p>Colores Disponibles:</p>
+          <div class="ContenedorColores">
+            <div class="color" id="negro"></div>
+            <div class="color" id="gris"></div>
+            <div class="color" id="blanco"></div>
+          </div>
 
-      <p>Selecciona una talla: </p>
-      <select name="talla" id="tallaselection">
-        <option value="">XS</option>
-        <option value="">S</option>
-        <option value="">M</option>
-        <option value="" selected>L</option>
-        <option value="">XL</option>
-        <option value="">XXL</option>
-      </select>
+          <p>Selecciona una talla: </p>
+          <select name="talla" id="tallaselection">
+            <option value="">XS</option>
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="" selected>L</option>
+            <option value="">XL</option>
+            <option value="">XXL</option>
+          </select>
 
-      <select name="color" id="colorselection">
-          <option value="" selected>Negro</option>
-          <option value="">Gris</option>
-          <option value="">Blanco</option>
-        </option>
-      </select>
+          <select name="color" id="colorselection">
+              <option value="" selected>Negro</option>
+              <option value="">Gris</option>
+              <option value="">Blanco</option>
+            </option>
+          </select>
 
+          <!-- CANTIDADES -->
+          <div id="Cantidades">
+            <button onclick="decrement()">-</button>
+            <input type="text" id="quantity" value="1" readonly>
+            <button onclick="increment()">+</button>
+          </div>
+          <script>
+            function increment() {
+              // Obtén el valor actual del campo
+              var quantityField = document.getElementById("quantity");
+              var currentQuantity = parseInt(quantityField.value);
 
-      <button>Añadir a la cesta</button>
+              // Incrementa el valor y actualiza el campo
+              quantityField.value = currentQuantity + 1;
+            }
+
+            function decrement() {
+              // Obtén el valor actual del campo
+              var quantityField = document.getElementById("quantity");
+              var currentQuantity = parseInt(quantityField.value);
+
+              // Asegúrate de que no disminuya por debajo de 0
+              if (currentQuantity > 0) {
+                // Decrementa el valor y actualiza el campo
+                quantityField.value = currentQuantity - 1;
+              }
+            }
+          </script>
+
+          <button>Añadir a la cesta</button>
+          <a href="checkout._1.html">
+            <button id="comprarfoccus">Comprar</button>
+          </a>
+        </div>
+
+        <div id="envio">
+          <h2>Envíos</h2>
+          <p>Envíos a la península y a canarias <br> <i>Entrega en mano solo si eres de Tenerife</i></p>
+          <h4>Canarias - 5.95€</h4>
+          <h4>Península - 9.99€</h4>
+        </div>
+
+      </div>
+      
 
     </aside>
 
-    <!-- TABLA CON BOOSTRAP -->
-    <div id="Tallas">
-      <h1>Tabla de tallas: </h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">S</th>
-            <th scope="col">M</th>
-            <th scope="col">L</th>
-            <th scope="col">XL</th>
-            <th scope="col">XXL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Pecho</th>
-            <td>50cm</td>
-            <td>60cm</td>
-            <td>70cm</td>
-            <td>100cm</td>
-            <td>120cm</td>
-          </tr>
-          <tr>
-            <th scope="row">Espalda</th>
-            <td>50cm</td>
-            <td>60cm</td>
-            <td>70cm</td>
-            <td>100cm</td>
-            <td>120cm</td>
-          </tr>
-          <tr>
-            <th scope="row">Alto</th>
-            <td>50cm</td>
-            <td>60cm</td>
-            <td>70cm</td>
-            <td>100cm</td>
-            <td>120cm</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </section>
+
+  <div class="informacion">
+    <h2>
+      PARA TI, HÉROE <br>
+      PORQUE TÚ ERES CAPAZ DE HACER GRANDES COSAS SI TE LO PROPONES.
+    </h2>
+
+    <p>
+      Camiseta oversize unisex con el diseño más flamante de la colección.
+      <i>El degradado de este producto varia en cada camiseta por el proceso de fabricación.</i> 
+    </p>
+    
+
+    <h2>
+      CALIDAD SUPREMA
+    </h2>
+
+    <p>
+        Las camisetas de AOI HERO son de la máxima calidad.
+        <br>
+        Cada prenda podría aguantar una pelea intergaláctica con Thanos sin desgastarse.
+        <br>
+        ¡Imagínate entonces lo que durarán en tu armario!
+    </p>
+
+    <h2>
+      CUIDAMOS TODOS LOS DETALLES
+    </h2>
+
+    <p>
+      No solo me he preocupado de que tengas la mejor calidad en el tejido y diseño.
+      <br>
+      En cada pedido que realices, vas a tener una  sorpresa   en el interior, ¿Te gustaría saber que es?
+    </p>
+
+    <br/>
+
+    <a href="#ContenedorProducto" class="hazmeclick">
+      <h3>¡Haz tu pedido y descúbrelo!</h3>
+    </a>
+    
+
+    <br/>
+    <br>
+
+    <h2>
+      COMPOSICIÓN Y LAVADO
+    </h2>
+
+    <p>
+      -Se recomienda lavar del revés con agua fría 30º-40º
+      <br>
+      -Cuello de canalé 1x1
+      <br>
+      - Bies interior de tejido principal en el cuello
+      <br>
+      PUNTO DE JERSEY SENCILLO
+      <br>
+      100% ALGODÓN ORGÁNICO HILADO Y PEINADO
+    </p>
+
+    <!-- TABLA CON BOOSTRAP -->
+  <div id="Tallas">
+    <h1>Tabla de tallas: </h1>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">S</th>
+          <th scope="col">M</th>
+          <th scope="col">L</th>
+          <th scope="col">XL</th>
+          <th scope="col">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Pecho</th>
+          <td>50cm</td>
+          <td>60cm</td>
+          <td>70cm</td>
+          <td>100cm</td>
+          <td>120cm</td>
+        </tr>
+        <tr>
+          <th scope="row">Espalda</th>
+          <td>50cm</td>
+          <td>60cm</td>
+          <td>70cm</td>
+          <td>100cm</td>
+          <td>120cm</td>
+        </tr>
+        <tr>
+          <th scope="row">Alto</th>
+          <td>50cm</td>
+          <td>60cm</td>
+          <td>70cm</td>
+          <td>100cm</td>
+          <td>120cm</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
+  
 
   <!-- FIN TABLA BOOSTRAP -->
 
   <!-- COMENTARIOS -->
 
-  <h2>Resenias:</h2>
+  <h2>Reseñas:</h2>
 
   <div class="card">       
     <div class="row">
@@ -240,6 +362,11 @@
 </div>
 
 <!-- FIN COMENTARIOS  o-->
+
+<section id="dudas">
+  <h2>¿Tienes alguna duda?</h2>
+  <button>¡Contáctanos!</button>
+</section>
   <footer>
     <p>Aoi Hero - By Hache</p>
     <p>2023 Todos los derechos reservados.</p>
