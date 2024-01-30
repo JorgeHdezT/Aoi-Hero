@@ -8,6 +8,8 @@ const modoNocheBtn = document.getElementById("checkbox");
         element.style.color = "#000";
     });
 
+    //arreglado el script, no se que le pasa a la web que esta tontita
+
     modoNocheBtn.addEventListener("click", () => {
         body.classList.toggle("modo-noche");
         if (body.classList.contains("modo-noche")) {
