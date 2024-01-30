@@ -36,9 +36,7 @@ const modoNocheBtn = document.getElementById("checkbox");
 
         h2.forEach(element => {
             element.style.color = "#000";
-            });
-
-        }
+        });
 });
 
 
