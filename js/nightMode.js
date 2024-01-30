@@ -3,8 +3,13 @@ const modoNocheBtn = document.getElementById("checkbox");
     const header = document.querySelector('body > header');
     const navBar_movil = document.querySelector('body .MovilNav');
     const h2 = document.querySelectorAll("h2");
+    const links = document.querySelectorAll("a");
 
     h2.forEach(element => {
+        element.style.color = "#000";
+    });
+
+    links.forEach(element => {
         element.style.color = "#000";
     });
 
@@ -21,9 +26,13 @@ const modoNocheBtn = document.getElementById("checkbox");
             header.style.backgroundColor = "#0052a3";
             navBar_movil.style.backdropfilter = "blur(10%)";
             navBar_movil.style.backgroundColor = "transparent";
-
+            
             h2.forEach(element => {
             element.style.color = "#fff";
+            });
+
+            links.forEach(element => {
+                element.style.color = "#fff";
             });
     
         } else {
@@ -36,6 +45,10 @@ const modoNocheBtn = document.getElementById("checkbox");
             navBar_movil.style.backgroundColor = "";
 
             h2.forEach(element => {
+                element.style.color = "#000";
+            });
+
+            links.forEach(element => {
                 element.style.color = "#000";
             });
 
