@@ -230,6 +230,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 section {
@@ -245,12 +246,17 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;;
+  margin-top: 20px;
+  width: 100%;
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  transform: scale(.88);
+}
+table caption {
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 table, th, td {
@@ -258,6 +264,7 @@ table, th, td {
 }
 
 th, td {
+  width: 50px;
   padding: 5px;
 }
 
@@ -392,7 +399,7 @@ footer {
 /*RESPONSIVIDAD*/
 
 /*PC*/
-@media (min-width: 1281px) {
+@media (min-width: 1000px) {
   header {
       height: 150px;
   }
@@ -589,9 +596,15 @@ footer {
 
 /*TABLET*/
 
-@media ((min-width: 768px) and (max-width: 1200px)) {
+@media ((min-width: 768px) and (max-width: 999px)) {
   header {
       height: 150px;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   #logo {
@@ -612,116 +625,101 @@ footer {
       font-weight: bolder;
   }
 
-  #carrusel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      margin: 5px;
-      color: dodgerblue;
-      font-size: bolder;
-      font-size: 50px;;
-  }
-
-  .flecha {
-      display: block;
-  }
-  
-  
-  #slidernav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      display: all;
-  }
-
-  #slider {
-      height: 250px;
-      width: 100%;
-      background-image: url(../images/carrusel\ PC.png);                  
-  }
-
-  #slidernav div {
-      width: 30px;
-      height: 30px;;
-  }
-
-  #novedades  {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: center;
-  
-  }
-  
-  .producto{
-      margin-top: 0px;
-      width: 50%;
-      padding: 10px;
-      font-size: 25px;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-  }
-
-  .producto p {
-      text-align: center;
-      margin-left: 0px;
-      margin-top: 0px;
-  }
-  
-  .imagenproducto {
-      transform: scale(80%);
-      width: 100%;
-      height: 500px;
-      margin: 0 auto;
-      transition: all 1s;
-      /* width: 170px;
-      height: 250px;
-      margin: 0 auto;
-      transition: all 1s; */
-  }
-
-  #caracteristicas {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-  }
-
-  .explicacion {
-      width: 30%;
-      height: 100%;
-      gap: 20px;
-  }
-
-  #imagen1, #imagen2 {
-      margin: 0 auto;
-      width: 100%;
-      height: 300px;
-      background-image: url("../images/explicacion.jpeg");
-      background-size: cover;                 
-      background-repeat: no-repeat;
-      background-position: center center;
-  }
-
-  #caracteristicas-titulo {
-      width: 100%;
-  }
-
-  #caracteristicas-titulo img {
-      transform: scale(80%);
-  }
-
-  #prom_vid {
-      width: 100%;
-  }
-
   main {
-      margin-bottom: 180px;
-  }
+    width: 50%;
+    backdrop-filter: blur(10px);
+}
+
+#imagenesMuestra {
+  width: 50%;
+}
+
+main h1 {
+  color: dodgerblue;
+  font-size: 60px;
+}
+
+#actividad {
+  background-color: rgba(255, 255, 255, 0.286);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#equipo {
+  background-color: rgba(255, 255, 255, 0.286);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+footer {
+    font-size: 20px;
+    padding: 20px;
+    height: 150px;
+    position: relative;
+}
+
+#imagenesGraficos {
+  width: 50%;
+}
+
+main iframe {
+  width: 60%;
+}
+
+#historia {
+  background-color: rgba(255, 255, 255, 0.286);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#video {
+  background-color: rgba(255, 255, 255, 0.286);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 100%;
+}
+
+#tabla {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.286);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+#otrasWebs {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.286);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
   footer {
       font-size: 20px;
       padding: 20px;
